@@ -1,0 +1,9 @@
+@extends('layouts.master')
+@section('container')
+@include('admin.kelolakomoditi.detailayam.kandang360')
+@include('admin.kelolakomoditi.detailayam.detailayam')
+@include('admin.kelolakomoditi.detailayam.perkembangan')
+@include('admin.kelolakomoditi.detailayam.pakan')
+@include('admin.kelolakomoditi.detailayam.kandang')
+@include('admin.kelolakomoditi.detailayam.map')
+@endsection

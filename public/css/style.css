@@ -1,0 +1,847 @@
+/********** Template CSS **********/
+:root {
+    --primary: #89bc56;
+    --light: #f3f6f9;
+    --dark: #191c24;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+/*** Button ***/
+.btn {
+    transition: 0.5s;
+}
+
+.btn.btn-primary {
+    color: #ffffff;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50px;
+}
+
+/*** Layout ***/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--light);
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.content {
+    margin-left: 250px;
+    min-height: 100vh;
+    background: #ffffff;
+    transition: 0.5s;
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        margin-left: 0;
+    }
+
+    .sidebar.open {
+        margin-left: -250px;
+    }
+
+    .content {
+        width: calc(100% - 250px);
+    }
+
+    .content.open {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .sidebar {
+        margin-left: -250px;
+    }
+
+    .sidebar.open {
+        margin-left: 0;
+    }
+
+    .content {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/*** Navbar ***/
+.sidebar .navbar .navbar-nav .nav-link {
+    padding: 7px 20px;
+    color: var(--dark);
+    font-weight: 500;
+    border-left: 3px solid var(--light);
+    border-radius: 0 30px 30px 0;
+    outline: none;
+}
+
+.sidebar .navbar .navbar-nav .nav-link:hover,
+.sidebar .navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+    background: #ffffff;
+    border-color: var(--primary);
+}
+
+.sidebar .navbar .navbar-nav .nav-link i {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 40px;
+}
+
+.sidebar .navbar .navbar-nav .nav-link:hover i,
+.sidebar .navbar .navbar-nav .nav-link.active i {
+    background: var(--light);
+}
+
+.sidebar .navbar .dropdown-toggle::after {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+.sidebar .navbar .dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(-180deg);
+}
+
+.sidebar .navbar .dropdown-item {
+    padding-left: 25px;
+    border-radius: 0 30px 30px 0;
+}
+
+.content .navbar .navbar-nav .nav-link {
+    margin-left: 25px;
+    padding: 12px 0;
+    color: var(--dark);
+    outline: none;
+}
+
+.content .navbar .navbar-nav .nav-link:hover,
+.content .navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.content .navbar .sidebar-toggler,
+.content .navbar .navbar-nav .nav-link i {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 40px;
+}
+
+.content .navbar .dropdown-toggle::after {
+    margin-left: 6px;
+    vertical-align: middle;
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+.content .navbar .dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(-180deg);
+}
+
+@media (max-width: 575.98px) {
+    .content .navbar .navbar-nav .nav-link {
+        margin-left: 15px;
+    }
+}
+
+/*** Date Picker ***/
+.bootstrap-datetimepicker-widget.bottom {
+    top: auto !important;
+}
+
+.bootstrap-datetimepicker-widget .table * {
+    border-bottom-width: 0px;
+}
+
+.bootstrap-datetimepicker-widget .table th {
+    font-weight: 500;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+    background: var(--primary);
+}
+
+.bootstrap-datetimepicker-widget table td.today::before {
+    border-bottom-color: var(--primary);
+}
+
+/*** Testimonial ***/
+.progress .progress-bar {
+    width: 0px;
+    transition: 2s;
+}
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 5px solid var(--primary);
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--dark);
+    border-color: var(--primary);
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(255, 255, 255, 0.3);  */
+    color: #191c24;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsif pada layar dengan lebar maksimal 767px */
+@media (max-width: 767px) {
+    .overlay-text {
+        font-size: 12px;
+        padding: 7px;
+    }
+}
+
+/* Responsif pada layar dengan lebar maksimal 575px */
+@media (max-width: 575px) {
+    .overlay-text {
+        font-size: 10px;
+        padding: 5px;
+    }
+}
+
+/* slider detail tanaman */
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff00;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    /* height: px; */
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 10px;
+    -webkit-appearance: none;
+    background-color: #ddd;
+    outline: none;
+    border-radius: 45px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 45px;
+    background-color: #89bc56;
+    cursor: pointer;
+    z-index: 100;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.pemupukan-event {
+    background-color: #89bc56;
+    color: #fff;
+    cursor: pointer;
+}
+
+.fc-header-toolbar .fc-button {
+    font-size: 10px !important; /* Ganti dengan ukuran font yang diinginkan */
+    /* Ganti dengan padding yang diinginkan */
+}
+
+.fc-center h2{
+    font-size: 18px !important;
+    color: #89bc56;
+}
+
+.fc-header-toolbar {
+    margin-bottom: 0px !important;
+}
+
+.swal-title {
+    font-size: 18px !important;
+    font-weight: lighter !important;
+}
+
+.swal-text {
+    font-size: 40px !important;
+    font-weight: bolder; 
+}
+
+
+.jenisPupukInfo {
+    margin-top: 10px;
+}
+
+.jenis-pupuk-list {
+    display: block;
+}
+
+.jenis-pupuk-list ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.jenis-pupuk-list li {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.pupuk-a {
+    background-color: green;
+    color: #fff;
+}
+
+.pupuk-b {
+    background-color: blue;
+    color: #fff;
+}
+
+.pupuk-c {
+    background-color: #FFA500;
+    color: #fff;
+}
+
+@media (max-width: 500px) {
+    .jenis-pupuk-list li {
+        margin-right: 5;
+        width: 100%;
+        padding: 3px 10px; 
+        font-size: 10px;/* Mengurangi padding untuk layar kecil */
+    }
+}
+
+.fc-unthemed td.fc-today {
+    background: rgb(197, 228, 166) !important;
+}
+
+
+
+
+.progressc {
+    width: 150px;
+    height: 150px;
+    background: none;
+    position: relative;
+  }
+  
+  .progressc::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 20px solid #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .progressc>span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .progressc .progressc-left {
+    left: 0;
+  }
+  
+  .progressc .progressc-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 20px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+  }
+  
+  .progressc .progressc-left .progressc-bar {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+  }
+  
+  .progressc .progressc-right {
+    right: 0;
+  }
+  
+  .progressc .progressc-right .progressc-bar {
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+  }
+  
+  .progressc .progressc-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  
+
+
+
+
+/* Mengubah class names */
+.ph-progress {
+    width: 150px;
+    height: 150px;
+    background: none;
+    position: relative;
+}
+
+/* Mengubah warna latar belakang dari ph-progress-bar */
+.ph-progress-bar {
+    background: linear-gradient(to right, #FFA500, #FFFF00, #00FF00, #800080);
+}
+
+/* Mengubah warna ph-progress-bar sesuai dengan value */
+.ph-progress-bar {
+    background: conic-gradient(from 0deg at 50% 50%, 
+        #FFA500 0%,       /* Orange, 0-4 */
+        #FFFF00 25%,      /* Yellow, 4-7 */
+        #00FF00 50%,      /* Green, 7-10 */
+        #800080 100%      /* Purple, 10-14 */
+    );
+}
+.orange-color {
+    border-color: #FFA500;
+}
+
+.yellow-color {
+    border-color: #FFFF00;
+}
+
+.green-color {
+    border-color: #00FF00;
+}
+
+.purple-color {
+    border-color: #800080;
+}
+
+.ph-progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 20px solid #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ph-progress>span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.ph-progress .ph-progress-left {
+    left: 0;
+}
+
+.ph-progress .ph-progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 20px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+}
+
+.ph-progress .ph-progress-left .ph-progress-bar {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+
+.ph-progress .ph-progress-right {
+    right: 0;
+}
+
+.ph-progress .ph-progress-right .ph-progress-bar {
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+}
+
+.ph-progress .ph-progress-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ph-range {
+    color: #F28C28;
+}
+
+.ph-value {
+    color: #F28C28;
+}
+
+
+ 
+
+
+.custom-progress {
+    display: flex;
+    height: 2rem;
+    overflow: hidden;
+    font-size: 0.75rem;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    position: relative; /* Menambahkan posisi relatif agar tooltip dapat diatur */
+}
+
+.custom-progress .progress-bar {
+    width: 0;
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+.progress-bar-0-25 {
+    background: -webkit-linear-gradient(
+        left,
+        #793b01 0%,
+        #9a4b00 100%
+    ) !important; /* Chrome10-25,Safari5.1-6 */
+}
+
+.progress-bar-25-50 {
+    background: -webkit-linear-gradient(
+        left,
+        #793b01 0%,
+        #aed84d 100%
+    ) !important; /* Chrome10-25,Safari5.1-6 */
+}
+
+.progress-bar-50-75 {
+    background: -webkit-linear-gradient(
+        left,
+        #9a4b00 0%,
+        #c6af35 50%,
+        #a8d32a 100%
+    ) !important; /* Chrome10-25,Safari5.1-6 */
+}
+
+.progress-bar-75-100 {
+    background: -webkit-linear-gradient(
+        left,
+        #9a4b00 0%,
+        #c6af35 25%,
+        #a8d32a 75%,
+        #8fbe00 100%
+    ) !important; /* Chrome10-25,Safari5.1-6 */
+}
+
+
+
+
+.infokehijauan {
+    margin-top: 10px;
+}
+
+.kehijauan {
+    display: block;
+}
+
+.kehijauan ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.kehijauan li {
+    padding: 5px 23px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .kehijauan li {
+        padding: 3px 10px !important; 
+    }
+}
+
+.mati{
+    background-color: #ffffff00;
+    color: #9A4C00;
+}
+
+.sakit {
+    background-color: #ffffff00;
+    color: #C7AF35;
+}
+
+.sehat {
+    background-color: #ffffff00;
+    color: #BEDC57;
+}
+
+.sangatsehat {
+    background-color: #ffffff00;
+    color: #93BF00;
+}
+
+
+.modal-header .close {
+    background-color: #89BC56; /* Warna latar belakang hijau */
+    color: white; /* Warna teks putih */
+    font-size: 10px; /* Ukuran font */
+    padding: 3px 8px; /* Padding tombol */
+    border: none;
+    border-radius: 25px;
+}
+
+.modal-header .close:hover {
+    background-color: darkgreen; /* Warna latar belakang saat tombol dihover */
+}
+
+
+
+
+
+
+
+.progressa {
+    width: 150px;
+    height: 150px;
+    background: none;
+    position: relative;
+  }
+  
+  .progressa::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 20px solid #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .progressa>span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .progressa .progressa-left {
+    left: 0;
+  }
+  
+  .progressa .progressa-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 20px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+  }
+  
+  .progressa .progressa-left .progressa-bar {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+  }
+  
+  .progressa .progressa-right {
+    right: 0;
+  }
+  
+  .progressa .progressa-right .progressa-bar {
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+  }
+  
+  .progressa .progressa-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  @media (max-width: 500px) {
+    .bg-light .rounded .fa{
+        margin-top: 0px !important; 
+    }
+}
+
+.vector {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin-top: -300px;
+}
+
+@media (max-width: 600px) {
+    .vector{
+        margin-top: -80px !important; 
+    }
+}
+
+.svg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+

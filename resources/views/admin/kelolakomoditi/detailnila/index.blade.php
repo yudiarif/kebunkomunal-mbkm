@@ -1,0 +1,9 @@
+@extends('layouts.master')
+@section('container')
+@include('admin.kelolakomoditi.detailnila.kolam360')
+@include('admin.kelolakomoditi.detailnila.detailnila')
+@include('admin.kelolakomoditi.detailnila.perkembangan')
+@include('admin.kelolakomoditi.detailnila.pakan')
+@include('admin.kelolakomoditi.detailnila.kolam')
+@include('admin.kelolakomoditi.detailnila.map')
+@endsection

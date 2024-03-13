@@ -1,0 +1,9 @@
+@extends('layouts.master')
+@section('container')
+@include('user.ayam.kandang360')
+@include('user.ayam.detailayam')
+@include('user.ayam.perkembangan')
+@include('user.ayam.pakan')
+@include('user.ayam.kandang')
+@include('user.ayam.map')
+@endsection

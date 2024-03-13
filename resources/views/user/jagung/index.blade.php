@@ -1,0 +1,9 @@
+@extends('layouts.master')
+@section('container')
+@include('user.jagung.lahan360')
+@include('user.jagung.detailtumbuhan')
+@include('user.jagung.pertumbuhan')
+@include('user.jagung.pemupukan')
+@include('user.jagung.kesuburan')
+@include('user.jagung.map')
+@endsection
