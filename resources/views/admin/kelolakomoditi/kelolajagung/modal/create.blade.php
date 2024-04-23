@@ -28,25 +28,7 @@
                                 <input type="number" class="form-control" id="kematian" name="kematian">
                             </div>
                         </div>
-                        {{-- <div class="row mb-3">
-                            <label for="jenis_pupuk" class="col-sm-4 col-form-label">Jenis Pupuk</label>
-                            <div class="col-sm-8">
-                                <select class="form-select" id="pupuk_id" name="pupuk_id" aria-label="Default select example">
-                                    <option selected value="">Pilih Jenis Pupuk</option>
-                                    @foreach ($datapupuk as $pupuk)      
-                                    <option value="{{ $pupuk->id }}">
-                                        {{ $pupuk->jenis_pupuk }}
-                                    </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="tanggal_pupuk" class="col-sm-4 col-form-label">Tanggal Pemupukan</label>
-                            <div class="col-sm-8">
-                                <input type="date" class="form-control" id="tanggal_pupuk" name="tanggal_pupuk" >
-                            </div>
-                        </div> --}}
+                        
                         <div class="row mb-3">
                             <label for="kehijauan" class="col-sm-4 col-form-label">Tingkat Kehijauan</label>
                             <div class="col-sm-8">
