@@ -21,7 +21,7 @@
                             {{-- <li><hr class="dropdown-divider"></li> --}}
                             </ul>
                         </div>
-                        <button type="button" class="btn btn-danger m-2" data-bs-toggle="modal" data-bs-target="#modalDeleteAll">Hapus Semua Record<i class="fa fa-trash ms-2"></i></button>
+                        <button type="button" class="btn btn-danger m-2" data-bs-toggle="modal" data-bs-target="#modalDeleteAll">Hapus Semua Record<i class="fa fa-trash ms-2"></i></button> </br>
                         <div class="btn-group m-2">
                             <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >
                             Panen<i class="fa fa-leaf ms-2"></i>
@@ -30,14 +30,37 @@
                             <li><a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#modalPanen" href="#">Tambah Data Panen</a></li>
                             <li><a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#modalRecordPanen" href="#">Lihat Record Panen</a></li>
                             {{-- <li><hr class="dropdown-divider"></li> --}}
+                            </ul> 
+                        </div>
+                        
+                        <div class="btn-group m-2">
+                            <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >
+                            Jenis Pupuk<i class="fa fa-leaf ms-2"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#jenisPupuk" href="#">Pilih Jenis Pupuk</a></li>
+                            {{-- <li><hr class="dropdown-divider"></li> --}}
                             </ul>
                         </div>
+
+                        <div class="btn-group m-2">
+                            <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >
+                            Tanggal Pemupukan<i class="fa fa-leaf ms-2"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#tanggal_pupuk" href="#">Masukkan Tanggal</a></li>
+                            {{-- <li><hr class="dropdown-divider"></li> --}}
+                            </ul>
+                        </div>
+                    </div>
                         @include('admin.kelolakomoditi.kelolajagung.modal.panen')
                         @include('admin.kelolakomoditi.kelolajagung.modal.recordpanen')
                         @include('admin.kelolakomoditi.kelolajagung.modal.create')
                         @include('admin.kelolakomoditi.kelolajagung.modal.foto')
                         @include('admin.kelolakomoditi.kelolajagung.modal.panorama')
                         @include('admin.kelolakomoditi.kelolajagung.modal.deleteall')
+                        @include('admin.kelolakomoditi.kelolajagung.modal.jenispupuk')
+                        @include('admin.kelolakomoditi.kelolajagung.modal.tanggalpemupukan')
                     </div>
 
                 </div>

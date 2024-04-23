@@ -11,4 +11,5 @@
 @include('admin.kelolakomoditi.kelolajagung.modal.panorama')
 @include('admin.kelolakomoditi.kelolajagung.modal.deleteall')
 
+
 @endsection
