@@ -11,9 +11,9 @@
                 <div class="col-sm-12 col-xl-12">
                     <div class=" h-100 p-4">
                         <div class="row mb-3">
-                            <label for="jenis_pupuk" class="col-sm-4 col-form-label">Jenis Pupuk</label>
+                            <label for="tgl_pemupukan" class="col-sm-4 col-form-label">Tanggal Pemupukann</label>
                             <div class="col-sm-8">
-                                <input type="button" class="form-control" id="jenis_pupuk" name="jenis_pupuk" >
+                                <input type="date" class="form-control" id="tgl_pemupukan" name="tgl_pemupukan" >
                             </div>
                         </div>
                         <input type="hidden" class="form-control" id="user_id" name="user_id" value="{{ $id }}">

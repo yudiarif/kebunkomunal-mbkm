@@ -51,7 +51,8 @@
                         @include('admin.kelolakomoditi.kelolajagung.modal.foto')
                         @include('admin.kelolakomoditi.kelolajagung.modal.panorama')
                         @include('admin.kelolakomoditi.kelolajagung.modal.deleteall')
-                        @include('admin.kelolakomoditi.kelolajagung.modal.pemupukan')
+                        @include('admin.kelolakomoditi.kelolajagung.modal.jenispupuk')
+                        @include('admin.kelolakomoditi.kelolajagung.modal.tglpemupukan')
                     </div>
 
                 </div>
