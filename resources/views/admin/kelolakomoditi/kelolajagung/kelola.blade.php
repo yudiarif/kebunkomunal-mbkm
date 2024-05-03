@@ -38,8 +38,8 @@
                             Pemupukan<i class="fa fa-leaf ms-2"></i>
                             </button>
                             <ul class="dropdown-menu">
-                            <li><a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#modalPemupukan" href="#">Jenis Pupuk</a></li>
-                            <li><a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#modalTglPemupukan" href="#">Tanggal Pemupukan</a></li>
+                            <li><a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#modalPupuk" href="#">Tambah Data Pupuk</a></li>
+                            <li><a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#modalRecordPupuk" href="#">Lihat Record Pupuk</a></li>
                             {{-- <li><hr class="dropdown-divider"></li> --}}
                             </ul> 
                         </div>
@@ -51,8 +51,8 @@
                         @include('admin.kelolakomoditi.kelolajagung.modal.foto')
                         @include('admin.kelolakomoditi.kelolajagung.modal.panorama')
                         @include('admin.kelolakomoditi.kelolajagung.modal.deleteall')
-                        @include('admin.kelolakomoditi.kelolajagung.modal.jenispupuk')
-                        @include('admin.kelolakomoditi.kelolajagung.modal.tglpemupukan')
+                        @include('admin.kelolakomoditi.kelolajagung.modal.pupuk')
+                        @include('admin.kelolakomoditi.kelolajagung.modal.recordpupuk')
                     </div>
 
                 </div>
