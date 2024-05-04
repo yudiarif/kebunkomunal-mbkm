@@ -45,7 +45,7 @@
                             {{-- <li><hr class="dropdown-divider"></li> --}}
                             </ul> 
                         </div>
-                    {{-- </div> --}}
+
                         @include('admin.kelolakomoditi.kelolajagung.modal.panen')
                         @include('admin.kelolakomoditi.kelolajagung.modal.recordpanen')
                         @include('admin.kelolakomoditi.kelolajagung.modal.create')
