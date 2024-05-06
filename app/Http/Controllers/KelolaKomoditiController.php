@@ -13,6 +13,7 @@ use App\Models\FotoPerkembangan;
 use App\Models\Panen;
 use App\Models\KomoditiYT;
 use App\Models\Map;
+use App\Models\Pemupukan;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
@@ -559,6 +560,30 @@ public function panenKomoditi(Request $request)
 public function destroyPanen($id)
 {
     Panen::find($id)->delete();
+    return redirect()->back()->with('success', 'Panen berhasil dihapus');
+}
+
+////////////////////PEMUPUKAN/////////////////////
+public function pemupukanKomoditi(Request $request)
+{
+    $validator = Validator::make($request->all(), [
+        'user_id' => 'required',
+        'komoditi_id' => 'required',
+        'pupuk_id' => 'required|numeric',
+        'tanggal_pupuk' => 'required|date',
+    ]);
+    $validatedData = $validator->validated();
+    if ($validator->fails()) {
+        return back()->with('errors', $validator->messages()->all()[0])->withInput();
+    }
+// dd($validatedData);
+    Pemupukan::create($validatedData);
+    return redirect()->back()->with('success', 'Berhasil menambahkan data panen');
+}
+
+public function destroyPemupukan($id)
+{
+    Pemupukan::find($id)->delete();
     return redirect()->back()->with('success', 'Panen berhasil dihapus');
 }
 
