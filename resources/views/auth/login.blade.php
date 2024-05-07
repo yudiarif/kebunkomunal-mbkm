@@ -84,6 +84,16 @@
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                                 <label for="floatingPassword">Password</label>
                             </div>
+                            {{-- remember me start--}}
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="icheck-primary">
+                                        <input type="checkbox" name='remember' id="remember">
+                                        <label for="remember">Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- remember me end --}}
                             <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Masuk</button>
                         </form>
                     </div>

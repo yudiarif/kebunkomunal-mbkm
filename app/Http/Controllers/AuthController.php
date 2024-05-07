@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Response;
 
 
 use Illuminate\Http\Request;
@@ -32,7 +33,9 @@ class AuthController extends Controller
             'password'=>$request->password,
         ];
 
-        if (Auth::attempt($infologin)) {
+        $remember = $request->has('remember');
+
+        if (Auth::attempt($infologin, $remember)) {
            if (Auth::user()->role_id == 1) {
             return redirect()->intended('admin/dashboard');
            }
@@ -40,6 +43,7 @@ class AuthController extends Controller
             return redirect()->intended('/');
            }
             // return redirect()->intended('admin/dashboard');
+           
         }else{
             return redirect('login')->withErrors('Username Atau Password Salah')->withInput();
         }
