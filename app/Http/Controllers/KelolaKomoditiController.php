@@ -67,6 +67,7 @@ class KelolaKomoditiController extends Controller
         $fotojagung = FotoPerkembangan::where('komoditi_id', 2)->where('user_id',$id)->latest()->first();
         $datajagung = KomoditiInfoJagung::with('user','pupuk')->where('user_id',$id)->get();
         $datapanenjagung = Panen::with('user','komoditi')->where('komoditi_id', 2)->where('user_id',$id)->get();
+        // $datapupukjagung = Pupuk::with('user','komoditi')->where('komoditi_id', 2)->where('user_id',$id)->get();
                 
         return view('admin.kelolakomoditi.kelolajagung.index',compact('users','datapupuk','komoditijagung','datajagung','id','fotojagung','panoramajagung','namauser','datapanenjagung'));
     }        

@@ -94,7 +94,7 @@
                                 </div>
                             </div>
                             {{-- remember me end --}}
-                            <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Masuk</button>
+                            <button type="submit" class="btn btn-primary py-2 w-100 mb-4">Masuk</button>
                         </form>
                     </div>
                 </div>

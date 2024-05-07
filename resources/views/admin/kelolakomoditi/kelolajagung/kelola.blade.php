@@ -21,7 +21,9 @@
                             {{-- <li><hr class="dropdown-divider"></li> --}}
                             </ul>
                         </div>
+                        
                         <button type="button" class="btn btn-danger m-2" data-bs-toggle="modal" data-bs-target="#modalDeleteAll">Hapus Semua Record<i class="fa fa-trash ms-2"></i></button>
+                        
                         <div class="btn-group m-2">
                             <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >
                             Panen<i class="fa fa-leaf ms-2"></i>
@@ -32,14 +34,27 @@
                             {{-- <li><hr class="dropdown-divider"></li> --}}
                             </ul>
                         </div>
+                        
+                        <div class="btn-group m-2"> 
+                            <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >
+                            Pemupukan<i class="fa fa-leaf ms-2"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#modalPupuk" href="#">Tambah Data Pupuk</a></li>
+                            <li><a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#modalRecordPupuk" href="#">Lihat Record Pupuk</a></li>
+                            {{-- <li><hr class="dropdown-divider"></li> --}}
+                            </ul> 
+                        </div>
+
                         @include('admin.kelolakomoditi.kelolajagung.modal.panen')
                         @include('admin.kelolakomoditi.kelolajagung.modal.recordpanen')
                         @include('admin.kelolakomoditi.kelolajagung.modal.create')
                         @include('admin.kelolakomoditi.kelolajagung.modal.foto')
                         @include('admin.kelolakomoditi.kelolajagung.modal.panorama')
                         @include('admin.kelolakomoditi.kelolajagung.modal.deleteall')
+                        @include('admin.kelolakomoditi.kelolajagung.modal.pupuk')
+                        @include('admin.kelolakomoditi.kelolajagung.modal.recordpupuk')
                     </div>
-
                 </div>
                   <div class="table-responsive">
                       <table id="example" class="table table-striped" style="width:100%">
@@ -70,8 +85,7 @@
                                             Tidak Ada Informasi
                                         @endif
                                     </a>
-                                    
-                                    
+                                                                      
                                 </td>
                                 <td class="text-center">
                                     <a class="btn btn-sm btn-primary my-1" data-bs-toggle="modal" data-bs-target="#modalEdit{{ $jagung->id }}" href="">Edit</a>
@@ -80,7 +94,6 @@
                                     @include('admin.kelolakomoditi.kelolajagung.modal.edit')
                                     @include('admin.kelolakomoditi.kelolajagung.modal.detail')
                                     @include('admin.kelolakomoditi.kelolajagung.modal.delete')
-
                                 </td>
                             </tr>
                             @php
@@ -96,3 +109,7 @@
   </div>
 </div>
 <!-- Blank End -->
+
+
+
+  

@@ -10,5 +10,5 @@
 @include('admin.kelolakomoditi.kelolajagung.modal.foto')
 @include('admin.kelolakomoditi.kelolajagung.modal.panorama')
 @include('admin.kelolakomoditi.kelolajagung.modal.deleteall')
-
+@include('admin.kelolakomoditi.kelolajagung.modal.pupuk')
 @endsection

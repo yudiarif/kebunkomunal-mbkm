@@ -103,6 +103,7 @@ Route::prefix('admin')->group(function () {
 
      //////panen///////////////////////
      Route::post('komoditi/panen-komoditi', [KelolaKomoditiController::class, 'panenKomoditi'])->name('panen-komoditi');
+     Route::post('komoditi/pemupukan-komoditi', [KelolaKomoditiController::class, 'pemupukanKomoditi'])->name('pemupukan-komoditi');
      Route::delete('komoditi/destroy-panen/{id}', [KelolaKomoditiController::class, 'destroyPanen'])->name('destroy-panen');
 
      ///////////////Youtube/////////////
