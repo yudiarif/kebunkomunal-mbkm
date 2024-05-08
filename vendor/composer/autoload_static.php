@@ -578,6 +578,7 @@ class ComposerStaticInitb30b8bdcc805db312fedfd35b6510cf7
         'App\\Models\\KomoditiYT' => __DIR__ . '/../..' . '/app/Models/KomoditiYT.php',
         'App\\Models\\Map' => __DIR__ . '/../..' . '/app/Models/Map.php',
         'App\\Models\\Panen' => __DIR__ . '/../..' . '/app/Models/Panen.php',
+        'App\\Models\\Pemupukan' => __DIR__ . '/../..' . '/app/Models/Pemupukan.php',
         'App\\Models\\Pupuk' => __DIR__ . '/../..' . '/app/Models/Pupuk.php',
         'App\\Models\\Role' => __DIR__ . '/../..' . '/app/Models/Role.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',

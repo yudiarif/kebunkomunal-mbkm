@@ -47,6 +47,7 @@ return array(
     'App\\Models\\KomoditiYT' => $baseDir . '/app/Models/KomoditiYT.php',
     'App\\Models\\Map' => $baseDir . '/app/Models/Map.php',
     'App\\Models\\Panen' => $baseDir . '/app/Models/Panen.php',
+    'App\\Models\\Pemupukan' => $baseDir . '/app/Models/Pemupukan.php',
     'App\\Models\\Pupuk' => $baseDir . '/app/Models/Pupuk.php',
     'App\\Models\\Role' => $baseDir . '/app/Models/Role.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
