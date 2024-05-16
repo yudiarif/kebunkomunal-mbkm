@@ -4,7 +4,7 @@
         <h5 class="mb-0">Total Komoditi dan Pengguna Kebun Komunal</h5>
     </div>
     <div class="row g-3">
-        <div class="col-6 col-xl-3">
+        <div class="col-12 col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-users fa-5x text-primary mt-2"></i>
                 <div class="ms-3">
@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 col-xl-3">
+        <div class="col-12 col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-user-tie fa-5x text-primary mt-2"></i>
                 <div class="ms-3">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 col-xl-3">
+        <div class="col-12 col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-pepper-hot fa-5x text-primary mt-2"></i>
                 <div class="ms-3">
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 col-xl-3">
+        <div class="col-12 col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-seedling fa-5x text-primary mt-2"></i>
                 <div class="ms-3">
@@ -56,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 col-xl-3">
+        <div class="col-12 col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-drumstick-bite fa-5x text-primary mt-2"></i>
                 <div class="ms-3">
@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 col-xl-3">
+        <div class="col-12 col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-fish fa-5x text-primary mt-2"></i>
                 <div class="ms-3">
@@ -88,7 +88,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 col-xl-3">
+        <div class="col-12 col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-shopping-basket fa-5x text-primary mt-2"></i>
                 <div class="ms-3">
