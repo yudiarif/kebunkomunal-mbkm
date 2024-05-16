@@ -13,7 +13,16 @@
                             <div class="row mb-3">
                                 <label for="jenis_pupuk" class="col-sm-4 col-form-label">Jenis Pupuk</label>
                                 <div class="col-sm-8">
-                                    <select class="form-select" id="pupuk_id" name="pupuk_id"
+                                    
+                                    <select class="form-select" id="pupuk_id" name="pupuk_id" aria-label="Default select example">
+                                        <option selected value="">Pilih Jenis Pupuk</option>
+                                        @foreach ($datapupuk as $pupuk)      
+                                        <option value="{{ $pupuk->id }}">
+                                            {{ $pupuk->jenis_pupuk }}
+                                        </option>
+                                        @endforeach
+                                    </select>
+                                    {{-- <select class="form-select" id="pupuk_id" name="pupuk_id"
                                         aria-label="Default select example">
                                         <option selected value="">Pilih Jenis Pupuk</option>
                            
@@ -28,15 +37,15 @@
                                         <option value="3">
                                             Belum Dipupuk
                                         </option>
-                                    </select>
+                                    </select> --}}
                                 </div>
                             </div>
 
                             <div class="row mb-3">
-                                <label for="tanggal_pemupukan" class="col-sm-4 col-form-label">Tanggal Pemupukan</label>
+                                <label for="tanggal_pupuk" class="col-sm-4 col-form-label">Tanggal Pemupukan</label>
                                 <div class="col-sm-8">
-                                    <input type="date" class="form-control" id="tanggal_pemupukan"
-                                        name="tanggal_pemupukan">
+                                    <input type="date" class="form-control" id="tanggal_pupuk"
+                                        name="tanggal_pupuk">
                                 </div>
                             </div>
                             <input type="hidden" class="form-control" id="user_id" name="user_id"
