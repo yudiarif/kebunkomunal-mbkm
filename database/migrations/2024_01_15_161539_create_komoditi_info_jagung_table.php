@@ -12,17 +12,17 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('komoditi_id');
-            $table->unsignedBigInteger('pupuk_id')->nullable();
+            // $table->unsignedBigInteger('pupuk_id')->nullable();
             $table->double('tinggi');
             $table->integer('kematian');
             $table->double('kehijauan');
-            $table->date('tanggal_pupuk')->nullable();
+            // $table->date('tanggal_pupuk')->nullable();
             $table->double('ph_tanah');
             $table->integer('jumlah_slot');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('komoditi_id')->references('id')->on('komoditi')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('pupuk_id')->references('id')->on('pupuk')->onDelete('set null')->onUpdate('cascade');
+            // $table->foreign('pupuk_id')->references('id')->on('pupuk')->onDelete('set null')->onUpdate('cascade');
         });
     }
 

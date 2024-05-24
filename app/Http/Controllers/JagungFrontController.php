@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\FotoPanorama;
 use App\Models\FotoPerkembangan;
 use App\Models\KomoditiInfoJagung;
+use App\Models\Pemupukan;
 use App\Models\Map;
 use Illuminate\Http\Request;
 
@@ -18,12 +19,13 @@ class JagungFrontController extends Controller
     public function index()
     {
         $userId = auth()->user()->id;
-        $datajagung = KomoditiInfoJagung::with('Pupuk')->where('user_id',$userId )->get();
+        $datajagung = KomoditiInfoJagung::where('user_id',$userId )->get();
         $datapanorama = FotoPanorama::where('user_id',$userId)->where('komoditi_id',2)->latest()->first();
         $dataperkembangan = FotoPerkembangan::where('user_id',$userId)->where('komoditi_id',2)->latest()->first();
+        $datapupukjagung = Pemupukan::with('user','komoditi')->where('komoditi_id', 2)->where('user_id',$userId)->get();
         $datamap = Map::where('komoditi_id',2)->get();
         // dd($datapanorama);
-        return view('user.jagung.index', compact('datajagung','userId','datapanorama','dataperkembangan','datamap'));
+        return view('user.jagung.index', compact('datajagung','userId','datapanorama','dataperkembangan','datamap','datapupukjagung'));
     }
 
     /**

@@ -13,11 +13,11 @@ class KomoditiInfoJagung extends Model
     protected $fillable = [
         'user_id',
         'komoditi_id',
-        'pupuk_id',
+        // 'pupuk_id',
         'tinggi',
         'kematian',
         'kehijauan',
-        'tanggal_pupuk',
+        // 'tanggal_pupuk',
         'ph_tanah',
         'jumlah_slot',
     ];

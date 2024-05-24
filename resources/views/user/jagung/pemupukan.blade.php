@@ -1,7 +1,7 @@
 
 @php
     $eventData = [];
-    foreach ($datajagung as $pupukjagung) {
+    foreach ($datapupukjagung as $pupukjagung) {
         if (!$pupukjagung->pupuk == null) {
             $event = [
                 "title" => $pupukjagung->pupuk->jenis_pupuk,

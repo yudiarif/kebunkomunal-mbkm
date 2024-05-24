@@ -50,11 +50,12 @@ class KelolaKomoditiController extends Controller
         ->latest()
         ->first();
         $datamap = Map::where('komoditi_id',2)->get();
+        $datapupukjagung = Pemupukan::with('user','komoditi')->where('komoditi_id', 2)->where('user_id',$id)->get();
 
         // dd($jagung);
         // dd($panoramajagung);
     
-        return view('admin.kelolakomoditi.detailjagung.index',compact('users','datapupuk','komoditijagung','jagung','panoramajagung','fotojagung','datamap'));
+        return view('admin.kelolakomoditi.detailjagung.index',compact('users','datapupukjagung','datapupuk','komoditijagung','jagung','panoramajagung','fotojagung','datamap'));
     }
 
     public function kelolaJagung($id)
