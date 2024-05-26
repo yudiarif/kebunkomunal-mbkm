@@ -27,6 +27,11 @@ use App\Http\Controllers\ProfilController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Mark as read for notifications
+Route::get('/markAsRead/{id}', function ($id) {
+    auth()->user()->unreadNotifications->where('id', $id)->markAsRead();
+    return redirect('/jagung');
+})->name('markAsRead');
 
 /////////////////////////////////
 Route::middleware(['guest'])->group(function(){
