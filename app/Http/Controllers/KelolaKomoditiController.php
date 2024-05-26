@@ -14,12 +14,15 @@ use App\Models\Panen;
 use App\Models\KomoditiYT;
 use App\Models\Map;
 use App\Models\Pemupukan;
+use App\Notifications\JagungUpdate;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Notification;
+use Illuminate\Support\Facades\Notification as FacadesNotification;
 
 class KelolaKomoditiController extends Controller
 {
@@ -92,7 +95,14 @@ class KelolaKomoditiController extends Controller
         }
         // dd($validatedData);
         
-        KomoditiInfoJagung::create($validatedData);
+        //JagungUpdate notification trigger
+        $jagung = KomoditiInfoJagung::create($validatedData);
+        $user = User::find($jagung->user_id);
+        if($user){
+            FacadesNotification::send($user, new JagungUpdate($jagung));
+        }
+        
+
         return redirect()->back()->with('success', 'Record komoditi jagung berhasil diperbaharui');
     }
     
