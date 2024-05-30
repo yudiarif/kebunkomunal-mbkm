@@ -40,21 +40,12 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="{{ asset('storage/' . $fotojagung->foto1) }}" class="d-block w-100" style="border-radius: 15px;" alt="">
-                            {{-- <div class="carousel-caption d-none d-md-block">
-                                <p>{{ $fotojagung->created_at }}</p>
-                            </div> --}}
                         </div>
                         <div class="carousel-item">
                             <img src="{{ asset('storage/' . $fotojagung->foto2) }}" class="d-block w-100" style="border-radius: 15px;" alt="">
-                            {{-- <div class="carousel-caption d-none d-md-block">
-                                <p>{{ $fotojagung->created_at }}</p>
-                            </div> --}}
                         </div>
                         <div class="carousel-item">
                             <img src="{{ asset('storage/' . $fotojagung->foto3) }}" class="d-block w-100" style="border-radius: 15px;" alt="">
-                            {{-- <div class="carousel-caption d-none d-md-block">
-                                <p>{{ $fotojagung->created_at }}</p>
-                            </div> --}}
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#jagungCarousel" role="button" data-slide="prev">
