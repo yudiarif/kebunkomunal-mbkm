@@ -15,6 +15,7 @@ use App\Models\KomoditiYT;
 use App\Models\Map;
 use App\Models\Pemupukan;
 use App\Notifications\JagungUpdate;
+use App\Notifications\PupukUpdate;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
@@ -589,8 +590,13 @@ public function pemupukanKomoditi(Request $request)
         return back()->with('errors', $validator->messages()->all()[0])->withInput();
     }
 // dd($validatedData);
-    Pemupukan::create($validatedData);
-    return redirect()->back()->with('success', 'Berhasil menambahkan data panen');
+     //PupukUpdate notification trigger
+     $pupukUpdate = Pemupukan::create($validatedData);
+     $user = User::find($pupukUpdate->user_id);
+     if($user){
+         FacadesNotification::send($user, new PupukUpdate($pupukUpdate));
+     }
+    return redirect()->back()->with('success', 'Berhasil menambahkan data pemupukan');
 }
 
 public function destroyPemupukan($id)
