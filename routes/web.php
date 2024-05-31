@@ -16,7 +16,9 @@ use App\Http\Controllers\JagungFrontController;
 use App\Http\Controllers\KatalogFrontController;
 use App\Http\Controllers\NilaFrontController;
 use App\Http\Controllers\ProfilController;
-
+use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +29,23 @@ use App\Http\Controllers\ProfilController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('activation/{user}', function (Request $request, $user) {
+    $token = $request->query('token');
+    if ($token) {
+        $credentials = explode(':', base64_decode($token));
+        if (count($credentials) === 2) {
+            $username = $credentials[0];
+            $password = $credentials[1];
+            if (Auth::attempt(['username' => $username, 'password' => $password])) {
+                // Redirect to the user's respective dashboard
+                return redirect()->intended(Auth::user()->role_id == 1 ? 'admin/dashboard' : '/');
+            }
+        }
+    }
+    return redirect('login')->withErrors('Invalid activation link or credentials.');
+})->name('activation')->middleware('signed');
+
 //Mark as read for notifications
 Route::get('/markAsRead/{id}', function ($id) {
     auth()->user()->unreadNotifications->where('id', $id)->markAsRead();

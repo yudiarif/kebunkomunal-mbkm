@@ -17,37 +17,34 @@ class AuthController extends Controller
         
     }
     public function login(Request $request)
-    {
-        $validator = Validator::make($request->all(), [
-            'username' => 'required',
-            'password' => 'required',
-        ]);
-        
-        $validatedData = $validator->validated();
-        if ($validator->fails()) {
-            return back()->with('errors', $validator->messages()->all()[0])->withInput();
-        }
+{
+    $validator = Validator::make($request->all(), [
+        'username' => 'required',
+        'password' => 'required',
+    ]);
 
-        $infologin = [
-            'username'=>$request->username,
-            'password'=>$request->password,
-        ];
+    if ($validator->fails()) {
+        return back()->with('errors', $validator->messages()->all()[0])->withInput();
+    }
 
-        $remember = $request->has('remember');
+    $credentials = $request->only('username', 'password');
 
-        if (Auth::attempt($infologin, $remember)) {
-           if (Auth::user()->role_id == 1) {
+    if (Auth::attempt($credentials)) {
+        // Pengguna berhasil login
+        $role = Auth::user()->role_id;
+        if ($role == 1) {
+            // Pengguna adalah admin, arahkan ke dashboard admin
             return redirect()->intended('admin/dashboard');
-           }
-           elseif (Auth::user()->role_id == 2) {
+        } elseif ($role == 2) {
+            // Pengguna adalah user biasa, arahkan ke halaman dashboard user
             return redirect()->intended('/');
-           }
-            // return redirect()->intended('admin/dashboard');
-           
-        }else{
-            return redirect('login')->withErrors('Username Atau Password Salah')->withInput();
         }
     }
+
+    // Jika login gagal, kembalikan ke halaman login dengan pesan kesalahan
+    return redirect('login')->withErrors('Username atau Password Salah')->withInput();
+}
+
     public function logout()
     {
         Auth::logout();
