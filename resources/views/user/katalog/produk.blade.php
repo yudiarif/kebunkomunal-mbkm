@@ -5,7 +5,12 @@
             {{-- <input class="form-control border-1" type="search" placeholder="Cari Produk..."> --}}
         </form>
     </div>
-    <div class="row g-3">
+    <div class="row g-3 d-flex h-100">
+        @if ($datakatalog->count() == 0)
+        <div class="d-flex align-items-center justify-content-center" style="height: 400px">
+            <h1 style="color: #58A818">Segera Hadir</h1>
+        </div>
+        @else
 
         @foreach ($datakatalog as $item)
         <div class="col-sm-12 col-6 col-xl-3">
@@ -21,6 +26,8 @@
         </div>
         @include('user.katalog.modal.detail')
         @endforeach
+
+        @endif
     </div>
 </div>
 
