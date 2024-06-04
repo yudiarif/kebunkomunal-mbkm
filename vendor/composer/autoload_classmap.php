@@ -51,6 +51,8 @@ return array(
     'App\\Models\\Pupuk' => $baseDir . '/app/Models/Pupuk.php',
     'App\\Models\\Role' => $baseDir . '/app/Models/Role.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Notifications\\JagungUpdate' => $baseDir . '/app/Notifications/JagungUpdate.php',
+    'App\\Notifications\\PupukUpdate' => $baseDir . '/app/Notifications/PupukUpdate.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
