@@ -10,7 +10,7 @@
                 <div class="ms-3">
                     <h6 class="mb-2">Pengguna</h6>
                     <h2 class="mb-0" style="color: green;">{{ $totaluser->count() }}</h2>
-                    <h7>User Kebun Komunal</h7>
+                    <h7>Petani Digital</h7>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-6 col-xl-3">
+        {{-- <div class="col-12 col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-pepper-hot fa-5x text-primary mt-2"></i>
                 <div class="ms-3">
@@ -39,7 +39,7 @@
                     <h7>User menggambil</h7>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="col-12 col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-seedling fa-5x text-primary mt-2"></i>
@@ -56,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-6 col-xl-3">
+        {{-- <div class="col-12 col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-drumstick-bite fa-5x text-primary mt-2"></i>
                 <div class="ms-3">
@@ -71,8 +71,8 @@
                     <h7>User menggambil</h7>
                 </div>
             </div>
-        </div>
-        <div class="col-12 col-sm-6 col-xl-3">
+        </div> --}}
+        {{-- <div class="col-12 col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-fish fa-5x text-primary mt-2"></i>
                 <div class="ms-3">
@@ -87,7 +87,7 @@
                     <h7>User menggambil</h7>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="col-12 col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-shopping-basket fa-5x text-primary mt-2"></i>
@@ -110,7 +110,7 @@
     <!-- Recent Sales Start -->
     <div class="container-fluid pt-4 px-1">
         <div class="d-flex align-items-center justify-content-between mb-4">
-            <h5 class="mb-0">Total Panen Setiap Komoditi</h5>
+            <h5 class="mb-0">Total Panen</h5>
         </div>
         <div class="bg-light text-center rounded p-4">
             <div class="d-flex align-items-center justify-content-between mb-4">

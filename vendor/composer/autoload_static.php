@@ -582,6 +582,8 @@ class ComposerStaticInitb30b8bdcc805db312fedfd35b6510cf7
         'App\\Models\\Pupuk' => __DIR__ . '/../..' . '/app/Models/Pupuk.php',
         'App\\Models\\Role' => __DIR__ . '/../..' . '/app/Models/Role.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Notifications\\JagungUpdate' => __DIR__ . '/../..' . '/app/Notifications/JagungUpdate.php',
+        'App\\Notifications\\PupukUpdate' => __DIR__ . '/../..' . '/app/Notifications/PupukUpdate.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

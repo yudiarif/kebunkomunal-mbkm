@@ -10,7 +10,7 @@
                 <div class="p-2">
                   
                     <div class="table-responsive">
-                        <table id="example" class="table table-striped" style="width:100%">
+                        <table id="example" class="table table-striped" style="width:100%;">
                             <thead>
                                 <tr class="text-dark text-center">
                                     <th scope="col" class="text-center">No</th>
@@ -49,9 +49,9 @@
                                             </button>
                                             <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="{{ route('kelola-jagung',$user->id) }}">Kelola Komoditi Jagung</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('kelola-cabai',$user->id) }}">Kelola Komoditi Cabai</a></li>
+                                            {{-- <li><a class="dropdown-item" href="{{ route('kelola-cabai',$user->id) }}">Kelola Komoditi Cabai</a></li>
                                             <li><a class="dropdown-item" href="{{ route('kelola-nila',$user->id) }}">Kelola Komoditi Nila</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('kelola-ayam',$user->id) }}">Kelola Komoditi Ayam</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('kelola-ayam',$user->id) }}">Kelola Komoditi Ayam</a></li> --}}
                                             <li><hr class="dropdown-divider"></li>
                                            
                                             </ul>
@@ -62,9 +62,9 @@
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="{{ route('show-jagung',$user->id) }}">Lihat Komoditi Jagung</a></li>
-                                                <li><a class="dropdown-item" href="{{ route('show-cabai',$user->id) }}">Lihat Komoditi Cabai</a></li>
+                                                {{-- <li><a class="dropdown-item" href="{{ route('show-cabai',$user->id) }}">Lihat Komoditi Cabai</a></li>
                                                 <li><a class="dropdown-item" href="{{ route('show-nila',$user->id) }}">Lihat Komoditi Nila</a></li>
-                                                <li><a class="dropdown-item" href="{{ route('show-ayam',$user->id) }}">Lihat Komoditi Ayam</a></li>
+                                                <li><a class="dropdown-item" href="{{ route('show-ayam',$user->id) }}">Lihat Komoditi Ayam</a></li> --}}
                                             <li><hr class="dropdown-divider"></li>
                                             </ul>
                                         </div>
