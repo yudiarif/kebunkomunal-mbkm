@@ -28,7 +28,7 @@
                             @endif
                         </div>
                     </div>
-                    <div class="nav-item dropdown">
+                    <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle {{ Request::is('ayam', 'nila') ? 'show active' : '' }}" data-bs-toggle="dropdown"><i class="fas fa-feather-alt me-2"></i>Hewan</a>
                         <div class="dropdown-menu bg-transparent border-0 {{ Request::is('ayam', 'nila') ? 'show' : '' }}">
                             @if (!auth()->user()->KomoditiInfoAyam->isEmpty())
@@ -38,7 +38,7 @@
                             <a href="{{ url('/nila') }}" class="dropdown-item {{ Request::is('nila') ? 'active' : '' }}"><i class="fa fa-fish me-3"></i>Nila</a>
                             @endif
                         </div>
-                    </div>
+                    </div> -->
                     <a href="{{ url('/katalog') }}" class="nav-item nav-link {{ Request::is('katalog') ? 'active' : '' }}"><i class="fa fa-shopping-basket me-2"></i>Katalog</a>
                     @elseif(auth()->user()->role_id == 1)
                     <a href="{{ url('/admin/dashboard') }}" class="nav-item nav-link {{ Request::is('admin/dashboard') ? 'active' : '' }}"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>

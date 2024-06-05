@@ -17,6 +17,8 @@
             Detail Nila
             @elseif(Request::is('katalog'))
             Katalog Produk
+            @elseif(Request::is('profil'))
+            Profil
             @endif
         </h6>
     </div>
@@ -31,7 +33,7 @@
                 <div class="bg-success rounded-circle border border-2 border-white position-absolute bottom-3" style="padding: 0.35rem;"></div>
             @endif
             <i class="fa fa-bell me-lg-2 rounded-circle" style="width: 40px; height: 40px;" ></i>
-            <span class="d-none d-lg-inline-flex">Notification</span>
+            <span class="d-none d-lg-inline-flex">Notifikasi</span>
         </a>
         <div class="dropdown-menu dropdown-menu-end bg-light rounded justify-content-center p-2 pt-3">
             @forelse(auth()->user()->unreadNotifications as $notification)
@@ -42,7 +44,7 @@
                 </a>
             </div>
             @empty
-                <p class="dropdown-item text-center">No notifications</p>
+                <p class="dropdown-item text-center">Tida ada notifikasi</p>
             @endforelse
         </div>
     </div>

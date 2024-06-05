@@ -12,10 +12,10 @@
 
 <div class="container-fluid pt-4 px-4">
     <div class="d-flex align-items-center justify-content-between mb-4">
-        <h5 class="mb-0 text-white" style="z-index: 3;">Jumlah yang Dimiliki</h5>
+        <h5 class="mb-0 text-white" style="z-index: 3;">Lahan {{ auth()->user()->nama }}</h5>
     </div>
     <div class="row g-3">
-        <div class="col-6 col-xl-3" style="z-index: 3;">
+        <!-- <div class="col-6 col-xl-3" style="z-index: 3;">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-pepper-hot fa-4x text-primary mt-2"></i>
                 <div class="ms-3">
@@ -31,24 +31,31 @@
                     <h7>Polybag</h7>
                 </div>
             </div>
-        </div>
-        <div class="col-6 col-xl-3" style="z-index: 3;">
+        </div> -->
+        <div class="col-12 col-xl-3" style="z-index: 3;">
             <div class="bg-light rounded d-flex justify-content-center p-4">
-                <i class="fa fa-seedling fa-4x text-primary mt-2"></i>
+                <i class="fa fa-seedling fa-5x text-primary mt-2"></i>
                 <div class="ms-3">
-                    <h6 class="mb-2">Jagung</h6>
-                    <h4 class="mb-0" style="color: green;">
+                    <h5 class="mb-1">Jagung</h5>
+                    <h1 class="mb-0" style="color: green;">
                         @if (!optional($totaljagung->last())->jumlah_slot == NULL)
                         {{ optional($totaljagung->last())->jumlah_slot }}
                         @else
                         0
                         @endif
-                    </h4>
+                    </h1>
                     <h7>Slot</h7>
                 </div>
             </div>
         </div>
-        <div class="col-6 col-xl-3" style="z-index: 3;">
+
+        <div class="col-12 col-xl-9" style="z-index: 3;">
+            <div class="bg-light rounded d-flex justify-content-center p-3">
+            <div id="id3e4d36977a684" a='{"t":"r","v":"1.2","lang":"id","locs":[1679],"ssot":"c","sics":"ds","cbkg":"rgba(137,188,86,0)","cfnt":"rgba(137,188,86,1)","codd":"#FFFFFF00","cont":"rgba(137,188,86,1)","eln":"bool","stof":"3"}'>Sumber Data Cuaca: <a href="https://cuacalab.id/cuaca_pontianak/besok/">ramalan cuaca besok di Pontianak</a></div><script async src="https://static1.cuacalab.id/widgetjs/?id=id3e4d36977a684"></script>
+            </div>
+        </div>
+
+        <!-- <div class="col-6 col-xl-3" style="z-index: 3;">
             <div class="bg-light rounded d-flex justify-content-center p-4">
                 <i class="fa fa-drumstick-bite fa-4x text-primary mt-2"></i>
                 <div class="ms-3">
@@ -79,7 +86,7 @@
                     <h7>Ekor</h7>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 <!-- Sale & Revenue End -->
