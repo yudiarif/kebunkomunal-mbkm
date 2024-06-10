@@ -36,8 +36,8 @@
                         </div>
                         
                         <div class="btn-group m-2"> 
-                            <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >
-                            Pemupukan<i class="fa fa-leaf ms-2"></i>
+                            <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >
+                            Pemupukan<i class="fa fa-spin fa-cog ms-2"></i>
                             </button>
                             <ul class="dropdown-menu">
                             <li><a class="dropdown-item"  data-bs-toggle="modal" data-bs-target="#modalPupuk" href="#">Tambah Data Pupuk</a></li>

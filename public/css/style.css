@@ -549,19 +549,19 @@ input[type="range"]::-moz-range-thumb {
     );
 }
 .orange-color {
-    border-color: #ffa500;
+    color: #ffa500;
 }
 
 .yellow-color {
-    border-color: #ffff00;
+    color: #ffff00;
 }
 
 .green-color {
-    border-color: #00ff00;
+    color: #00ff00;
 }
 
 .purple-color {
-    border-color: #800080;
+    color: #800080;
 }
 
 .ph-progress::after {
@@ -627,11 +627,11 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .ph-range {
-    color: #f28c28;
+    color: #89BC56;
 }
 
 .ph-value {
-    color: #f28c28;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 }
 
 .custom-progress {
