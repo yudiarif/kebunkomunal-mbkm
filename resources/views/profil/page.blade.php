@@ -29,8 +29,8 @@
                             <dd class="col-sm-6 text-start">{{ auth()->user()->username}}</dd>
                             <dt class="col-sm-6">No HP :</dt>
                             <dd class="col-sm-6 text-start">{{ auth()->user()->no_hp}}</dd>
-                            <dt class="col-sm-6">Role :</dt>
-                            <dd class="col-sm-6 text-start">{{ auth()->user()->role->nama}}</dd>
+                            <!-- <dt class="col-sm-6">Role :</dt>
+                            <dd class="col-sm-6 text-start">{{ auth()->user()->role->nama}}</dd> -->
                         
                         </dl>
                     </div>

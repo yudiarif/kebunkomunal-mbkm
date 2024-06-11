@@ -14,8 +14,8 @@
                             <thead>
                                 <tr class="text-dark text-center">
                                     <th scope="col" class="text-center">No</th>
+                                    <th scope="col" class="text-center">Jenis Pupuk</th>
                                     <th scope="col" class="text-center">Tanggal Pemupukan</th>
-                                    <th scope="col" class="text-center">Jumlah Pupuk</th>
                                     <th scope="col" class="text-center">Action</th>
                                 </tr>
                             </thead>
@@ -23,14 +23,21 @@
                               @php
                                   $no=1
                               @endphp
-                              @foreach ($datapanenjagung as $pupukjagung)
+                              @foreach ($datapupukjagung as $pupukjagung)
                               <tr class="text-center">
                                   <td>{{ $no }}</td>
+
+                                  {{-- ambil id info pupuk --}}
+                                  <td class="text-center">
+                                    {{ $pupukjagung->pupuk->jenis_pupuk}}
+                                  </td>
+
+                                  {{-- Tanggal pemupukan --}}
                                   <td>
-                                          @if ($pupukjagung->tanggal_pemupukan)
+                                          @if ($pupukjagung->tanggal_pupuk)
                                               @php
                                                   \Carbon\Carbon::setLocale('id');
-                                                  $formattedDate = \Carbon\Carbon::parse($pupukjagung->tanggal_pemupukan)->isoFormat('D MMMM YYYY');
+                                                  $formattedDate = \Carbon\Carbon::parse($pupukjagung->tanggal_pupuk)->isoFormat('D MMMM YYYY');
                                               @endphp
                                               {{ $formattedDate }}
                                           @else
@@ -39,11 +46,8 @@
                                           @endif
                                   </td>
                                   <td class="text-center">
-                                    {{ $pupukjagung->jumlah_pupuk }} kg
-                                  </td>
-                                  <td class="text-center">
-                                    <a class="btn btn-sm btn-danger my-1" data-bs-toggle="modal" data-bs-target="#modalDeletePanen{{ $panenjagung->id }}" href="">Hapus</a>
-                                    @include('admin.kelolakomoditi.kelolajagung.modal.deletepanen')
+                                    <a class="btn btn-sm btn-danger my-1" data-bs-toggle="modal" data-bs-target="#modalDeletePanen{{ $pupukjagung->id }}" href="">Hapus</a>
+                                    @include('admin.kelolakomoditi.kelolajagung.modal.deletepemupukan')
                                   </td>
                               </tr>
                               @php

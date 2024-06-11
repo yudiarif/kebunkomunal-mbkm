@@ -23,6 +23,9 @@ class DashboardFrontController extends Controller
         $userId = auth()->user()->id;
         $totalcabai = KomoditiInfoCabai::where('user_id',$userId)->get();
         $totaljagung = KomoditiInfoJagung::where('user_id',$userId)->get();
+        
+        $tanggalmulai = KomoditiInfoJagung::where('user_id',$userId)->get();
+
         $totalayam = KomoditiInfoAyam::where('user_id',$userId)->get();
         $totalnila = KomoditiInfoNila::where('user_id',$userId)->get();
 
@@ -40,7 +43,7 @@ class DashboardFrontController extends Controller
         
 
         // dd($linkwa);
-        return view('user.dashboard.index', compact('totalcabai','totaljagung','totalayam','totalnila','panencabai','panenjagung','panennila','panenayam','slotcabai','slotjagung','slotnila','slotayam'));
+        return view('user.dashboard.index', compact('totalcabai','tanggalmulai','totaljagung','totalayam','totalnila','panencabai','panenjagung','panennila','panenayam','slotcabai','slotjagung','slotnila','slotayam'));
 
     }
 

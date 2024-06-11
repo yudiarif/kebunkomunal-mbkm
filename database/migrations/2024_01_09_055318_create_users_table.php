@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('no_hp')->unique(); // Nomor HP unik
             $table->string('foto')->nullable(); // Nomor HP unik
             $table->string('password'); // Password user
+            $table->string('signed_url')->nullable();
             $table->unsignedBigInteger('role_id')->default(2); // Kolom role_id
             $table->timestamp('created_at')->useCurrent(); // Waktu pembuatan record
             $table->timestamp('updated_at')->useCurrent(); // Waktu update record

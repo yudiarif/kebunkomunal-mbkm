@@ -13,12 +13,17 @@ use App\Models\FotoPerkembangan;
 use App\Models\Panen;
 use App\Models\KomoditiYT;
 use App\Models\Map;
+use App\Models\Pemupukan;
+use App\Notifications\JagungUpdate;
+use App\Notifications\PupukUpdate;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Notification;
+use Illuminate\Support\Facades\Notification as FacadesNotification;
 
 class KelolaKomoditiController extends Controller
 {
@@ -49,11 +54,12 @@ class KelolaKomoditiController extends Controller
         ->latest()
         ->first();
         $datamap = Map::where('komoditi_id',2)->get();
+        $datapupukjagung = Pemupukan::with('user','komoditi')->where('komoditi_id', 2)->where('user_id',$id)->get();
 
         // dd($jagung);
         // dd($panoramajagung);
     
-        return view('admin.kelolakomoditi.detailjagung.index',compact('users','datapupuk','komoditijagung','jagung','panoramajagung','fotojagung','datamap'));
+        return view('admin.kelolakomoditi.detailjagung.index',compact('users','datapupukjagung','datapupuk','komoditijagung','jagung','panoramajagung','fotojagung','datamap'));
     }
 
     public function kelolaJagung($id)
@@ -66,9 +72,9 @@ class KelolaKomoditiController extends Controller
         $fotojagung = FotoPerkembangan::where('komoditi_id', 2)->where('user_id',$id)->latest()->first();
         $datajagung = KomoditiInfoJagung::with('user','pupuk')->where('user_id',$id)->get();
         $datapanenjagung = Panen::with('user','komoditi')->where('komoditi_id', 2)->where('user_id',$id)->get();
-        // $datapupukjagung = Pupuk::with('user','komoditi')->where('komoditi_id', 2)->where('user_id',$id)->get();
+        $datapupukjagung = Pemupukan::with('user','komoditi')->where('komoditi_id', 2)->where('user_id',$id)->get();
                 
-        return view('admin.kelolakomoditi.kelolajagung.index',compact('users','datapupuk','komoditijagung','datajagung','id','fotojagung','panoramajagung','namauser','datapanenjagung'));
+        return view('admin.kelolakomoditi.kelolajagung.index',compact('users','datapupuk','komoditijagung','datajagung','id','fotojagung','panoramajagung','namauser','datapanenjagung','datapupukjagung'));
     }        
 
     public function storeKomoditiJagung(Request $request)
@@ -90,7 +96,14 @@ class KelolaKomoditiController extends Controller
         }
         // dd($validatedData);
         
-        KomoditiInfoJagung::create($validatedData);
+        //JagungUpdate notification trigger
+        $jagung = KomoditiInfoJagung::create($validatedData);
+        $user = User::find($jagung->user_id);
+        if($user){
+            FacadesNotification::send($user, new JagungUpdate($jagung));
+        }
+        
+
         return redirect()->back()->with('success', 'Record komoditi jagung berhasil diperbaharui');
     }
     
@@ -560,6 +573,35 @@ public function panenKomoditi(Request $request)
 public function destroyPanen($id)
 {
     Panen::find($id)->delete();
+    return redirect()->back()->with('success', 'Panen berhasil dihapus');
+}
+
+////////////////////PEMUPUKAN/////////////////////
+public function pemupukanKomoditi(Request $request)
+{
+    $validator = Validator::make($request->all(), [
+        'user_id' => 'required',
+        'komoditi_id' => 'required',
+        'pupuk_id' => 'required|numeric',
+        'tanggal_pupuk' => 'required|date',
+    ]);
+    $validatedData = $validator->validated();
+    if ($validator->fails()) {
+        return back()->with('errors', $validator->messages()->all()[0])->withInput();
+    }
+// dd($validatedData);
+     //PupukUpdate notification trigger
+     $pupukUpdate = Pemupukan::create($validatedData);
+     $user = User::find($pupukUpdate->user_id);
+     if($user){
+         FacadesNotification::send($user, new PupukUpdate($pupukUpdate));
+     }
+    return redirect()->back()->with('success', 'Berhasil menambahkan data pemupukan');
+}
+
+public function destroyPemupukan($id)
+{
+    Pemupukan::find($id)->delete();
     return redirect()->back()->with('success', 'Panen berhasil dihapus');
 }
 

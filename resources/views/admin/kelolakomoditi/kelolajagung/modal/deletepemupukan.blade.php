@@ -1,20 +1,20 @@
-{{-- <!-- Button trigger modal -->
-<form action="{{ route('destroy-panen', $panenjagung->id) }}" method="post" enctype="multipart/form-data">
+<!-- Button trigger modal -->
+<form action="{{ route('destroy-pemupukan', $pupukjagung->id) }}" method="post" enctype="multipart/form-data">
     @csrf
     @method('DELETE')
     <!-- Modal -->
-    <div class="modal fade" id="modalDeletePanen{{ $panenjagung->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalDeletePanen{{ $pupukjagung->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Hapus Record Panen jagung</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Hapus Record Pemupukan jagung</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            Anda yakin ingin menghapus record panen jagung tanggal @if ($panenjagung->tanggal_panen)
+            Anda yakin ingin menghapus record pemupukan jagung tanggal @if ($pupukjagung->tanggal_pupuk)
             @php
             \Carbon\Carbon::setLocale('id');
-            $formattedDate = \Carbon\Carbon::parse($panenjagung->tanggal_panen)->isoFormat('D MMMM YYYY');
+            $formattedDate = \Carbon\Carbon::parse($pupukjagung->tanggal_panen)->isoFormat('D MMMM YYYY');
             @endphp
             {{ $formattedDate }}
             @else
@@ -30,4 +30,4 @@
         </div>
       </div>
     </div>
-  </form> --}}
+  </form>

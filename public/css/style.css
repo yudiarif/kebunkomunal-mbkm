@@ -13,6 +13,30 @@
     z-index: 99;
 }
 
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: -50px; /* Adjust as needed */
+    left: 0;
+    margin: 0;
+    position: static;
+}
+
+.carousel-indicators li {
+    flex: 1;
+    max-width: 40%; /* Adjust based on the number of indicators */
+    height: 80px; /* Adjust as needed */
+    margin: 0 2px; /* Space between indicators */
+    border: none;
+}
+
+.carousel-indicators li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /*** Spinner ***/
 #spinner {
     opacity: 0;
@@ -352,13 +376,6 @@ input[type="range"]::-moz-range-thumb {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
 .pemupukan-event {
     background-color: #89bc56;
     color: #fff;
@@ -370,7 +387,7 @@ input[type="range"]::-moz-range-thumb {
     /* Ganti dengan padding yang diinginkan */
 }
 
-.fc-center h2{
+.fc-center h2 {
     font-size: 18px !important;
     color: #89bc56;
 }
@@ -386,9 +403,8 @@ input[type="range"]::-moz-range-thumb {
 
 .swal-text {
     font-size: 40px !important;
-    font-weight: bolder; 
+    font-weight: bolder;
 }
-
 
 .jenisPupukInfo {
     margin-top: 10px;
@@ -412,7 +428,6 @@ input[type="range"]::-moz-range-thumb {
     text-align: center;
 }
 
-
 .pupuk-a {
     background-color: green;
     color: #fff;
@@ -424,7 +439,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .pupuk-c {
-    background-color: #FFA500;
+    background-color: #ffa500;
     color: #fff;
 }
 
@@ -432,8 +447,8 @@ input[type="range"]::-moz-range-thumb {
     .jenis-pupuk-list li {
         margin-right: 5;
         width: 100%;
-        padding: 3px 10px; 
-        font-size: 10px;/* Mengurangi padding untuk layar kecil */
+        padding: 3px 10px;
+        font-size: 10px; /* Mengurangi padding untuk layar kecil */
     }
 }
 
@@ -441,17 +456,14 @@ input[type="range"]::-moz-range-thumb {
     background: rgb(197, 228, 166) !important;
 }
 
-
-
-
 .progressc {
     width: 150px;
     height: 150px;
     background: none;
     position: relative;
-  }
-  
-  .progressc::after {
+}
+
+.progressc::after {
     content: "";
     width: 100%;
     height: 100%;
@@ -460,22 +472,22 @@ input[type="range"]::-moz-range-thumb {
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  .progressc>span {
+}
+
+.progressc > span {
     width: 50%;
     height: 100%;
     overflow: hidden;
     position: absolute;
     top: 0;
     z-index: 1;
-  }
-  
-  .progressc .progressc-left {
+}
+
+.progressc .progressc-left {
     left: 0;
-  }
-  
-  .progressc .progressc-bar {
+}
+
+.progressc .progressc-bar {
     width: 100%;
     height: 100%;
     background: none;
@@ -483,40 +495,35 @@ input[type="range"]::-moz-range-thumb {
     border-style: solid;
     position: absolute;
     top: 0;
-  }
-  
-  .progressc .progressc-left .progressc-bar {
+}
+
+.progressc .progressc-left .progressc-bar {
     left: 100%;
     border-top-right-radius: 80px;
     border-bottom-right-radius: 80px;
     border-left: 0;
     -webkit-transform-origin: center left;
     transform-origin: center left;
-  }
-  
-  .progressc .progressc-right {
+}
+
+.progressc .progressc-right {
     right: 0;
-  }
-  
-  .progressc .progressc-right .progressc-bar {
+}
+
+.progressc .progressc-right .progressc-bar {
     left: -100%;
     border-top-left-radius: 80px;
     border-bottom-left-radius: 80px;
     border-right: 0;
     -webkit-transform-origin: center right;
     transform-origin: center right;
-  }
-  
-  .progressc .progressc-value {
+}
+
+.progressc .progressc-value {
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  
-
-
-
+}
 
 /* Mengubah class names */
 .ph-progress {
@@ -528,28 +535,29 @@ input[type="range"]::-moz-range-thumb {
 
 /* Mengubah warna latar belakang dari ph-progress-bar */
 .ph-progress-bar {
-    background: linear-gradient(to right, #FFA500, #FFFF00, #00FF00, #800080);
+    background: linear-gradient(to right, #ffa500, #ffff00, #00ff00, #800080);
 }
 
 /* Mengubah warna ph-progress-bar sesuai dengan value */
 .ph-progress-bar {
-    background: conic-gradient(from 0deg at 50% 50%, 
-        #FFA500 0%,       /* Orange, 0-4 */
-        #FFFF00 25%,      /* Yellow, 4-7 */
-        #00FF00 50%,      /* Green, 7-10 */
-        #800080 100%      /* Purple, 10-14 */
+    background: conic-gradient(
+        from 0deg at 50% 50%,
+        #ffa500 0%,
+        /* Orange, 0-4 */ #ffff00 25%,
+        /* Yellow, 4-7 */ #00ff00 50%,
+        /* Green, 7-10 */ #800080 100% /* Purple, 10-14 */
     );
 }
 .orange-color {
-    border-color: #FFA500;
+    border-color: #ffa500;
 }
 
 .yellow-color {
-    border-color: #FFFF00;
+    border-color: #ffff00;
 }
 
 .green-color {
-    border-color: #00FF00;
+    border-color: #00ff00;
 }
 
 .purple-color {
@@ -567,7 +575,7 @@ input[type="range"]::-moz-range-thumb {
     left: 0;
 }
 
-.ph-progress>span {
+.ph-progress > span {
     width: 50%;
     height: 100%;
     overflow: hidden;
@@ -619,16 +627,12 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .ph-range {
-    color: #F28C28;
+    color: #f28c28;
 }
 
 .ph-value {
-    color: #F28C28;
+    color: #f28c28;
 }
-
-
- 
-
 
 .custom-progress {
     display: flex;
@@ -681,9 +685,6 @@ input[type="range"]::-moz-range-thumb {
     ) !important; /* Chrome10-25,Safari5.1-6 */
 }
 
-
-
-
 .infokehijauan {
     margin-top: 10px;
 }
@@ -707,33 +708,32 @@ input[type="range"]::-moz-range-thumb {
 
 @media (max-width: 500px) {
     .kehijauan li {
-        padding: 3px 10px !important; 
+        padding: 3px 10px !important;
     }
 }
 
-.mati{
+.mati {
     background-color: #ffffff00;
-    color: #9A4C00;
+    color: #9a4c00;
 }
 
 .sakit {
     background-color: #ffffff00;
-    color: #C7AF35;
+    color: #c7af35;
 }
 
 .sehat {
     background-color: #ffffff00;
-    color: #BEDC57;
+    color: #bedc57;
 }
 
 .sangatsehat {
     background-color: #ffffff00;
-    color: #93BF00;
+    color: #93bf00;
 }
 
-
 .modal-header .close {
-    background-color: #89BC56; /* Warna latar belakang hijau */
+    background-color: #89bc56; /* Warna latar belakang hijau */
     color: white; /* Warna teks putih */
     font-size: 10px; /* Ukuran font */
     padding: 3px 8px; /* Padding tombol */
@@ -745,20 +745,14 @@ input[type="range"]::-moz-range-thumb {
     background-color: darkgreen; /* Warna latar belakang saat tombol dihover */
 }
 
-
-
-
-
-
-
 .progressa {
     width: 150px;
     height: 150px;
     background: none;
     position: relative;
-  }
-  
-  .progressa::after {
+}
+
+.progressa::after {
     content: "";
     width: 100%;
     height: 100%;
@@ -767,22 +761,22 @@ input[type="range"]::-moz-range-thumb {
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  .progressa>span {
+}
+
+.progressa > span {
     width: 50%;
     height: 100%;
     overflow: hidden;
     position: absolute;
     top: 0;
     z-index: 1;
-  }
-  
-  .progressa .progressa-left {
+}
+
+.progressa .progressa-left {
     left: 0;
-  }
-  
-  .progressa .progressa-bar {
+}
+
+.progressa .progressa-bar {
     width: 100%;
     height: 100%;
     background: none;
@@ -790,39 +784,39 @@ input[type="range"]::-moz-range-thumb {
     border-style: solid;
     position: absolute;
     top: 0;
-  }
-  
-  .progressa .progressa-left .progressa-bar {
+}
+
+.progressa .progressa-left .progressa-bar {
     left: 100%;
     border-top-right-radius: 80px;
     border-bottom-right-radius: 80px;
     border-left: 0;
     -webkit-transform-origin: center left;
     transform-origin: center left;
-  }
-  
-  .progressa .progressa-right {
+}
+
+.progressa .progressa-right {
     right: 0;
-  }
-  
-  .progressa .progressa-right .progressa-bar {
+}
+
+.progressa .progressa-right .progressa-bar {
     left: -100%;
     border-top-left-radius: 80px;
     border-bottom-left-radius: 80px;
     border-right: 0;
     -webkit-transform-origin: center right;
     transform-origin: center right;
-  }
-  
-  .progressa .progressa-value {
+}
+
+.progressa .progressa-value {
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  @media (max-width: 500px) {
-    .bg-light .rounded .fa{
-        margin-top: 0px !important; 
+}
+
+@media (max-width: 500px) {
+    .bg-light .rounded .fa {
+        margin-top: 0px !important;
     }
 }
 
@@ -834,8 +828,8 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (max-width: 600px) {
-    .vector{
-        margin-top: -80px !important; 
+    .vector {
+        margin-top: -80px !important;
     }
 }
 
@@ -844,4 +838,3 @@ input[type="range"]::-moz-range-thumb {
     left: 0;
     width: 100%;
 }
-

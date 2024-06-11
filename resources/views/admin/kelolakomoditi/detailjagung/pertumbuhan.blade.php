@@ -7,6 +7,7 @@
                 <div class="col-sm-12 col-xl-6">
 
                     <a href="#" data-toggle="modal" data-target="#pertumbuhanModal">
+                    <div class="position-absolute p-2"><i class="fa fa-info-circle text-body" style="opacity: 50%;"></i></div>
                         <div class="bg-light rounded d-flex justify-content-center p-4">
                             <i class="fa fa-ruler-vertical fa-5x text-primary mt-2"></i>
                             <div class="ms-3" style="text-align: center;">
@@ -27,6 +28,7 @@
            
                 <div class="col-sm-12 col-xl-6">
                     <a href="#" data-toggle="modal" data-target="#kematianModal">
+                    <div class="position-absolute p-2"><i class="fa fa-info-circle text-body" style="opacity: 50%;"></i></div>
                         <div class="bg-light rounded d-flex justify-content-center p-4">
                             <i class="fa fa-heartbeat fa-5x text-danger mt-2"></i>
                             <div class="ms-3" style="text-align: center;">

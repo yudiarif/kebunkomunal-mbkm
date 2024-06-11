@@ -46,11 +46,12 @@
                       <div class="col-sm-8">
                           <select class="form-select" id="komoditi_id" name="komoditi_id" aria-label="Default select example">
                               
-                              @foreach ($datakomoditi as $komoditi)      
+                              {{-- @foreach ($datakomoditi as $komoditi)      
                               <option value="{{ $komoditi->id }}" {{ $komoditi->id ==  $map->komoditi_id ? 'selected' : '' }}>
                                   {{ $komoditi->nama_komoditi }}
                               </option>
-                              @endforeach
+                              @endforeach --}}
+                               <option value="2">Jagung</option>
                           </select>
                     </div>     
                     </div>
