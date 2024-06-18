@@ -12,7 +12,7 @@
 <script>
     var dataMap = @json($datamap);
     // Inisialisasi peta pada elemen dengan ID "map" dan koordinat Pontianak
-    var map = L.map('map').setView([-0.0227, 109.3425], 13); // Latitude dan Longitude Pontianak
+    var map = L.map('map').setView([-0.0227, 109.3425], 11); // Latitude dan Longitude Pontianak
 
     var googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
         maxZoom: 20,
