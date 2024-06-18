@@ -631,7 +631,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .ph-value {
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 .custom-progress {
