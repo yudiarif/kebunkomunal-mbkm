@@ -61,21 +61,22 @@
             var value = parseFloat($(this).attr('data-value'));
             var left = $(this).find('.ph-progress-left .ph-progress-bar');
             var right = $(this).find('.ph-progress-right .ph-progress-bar');
+            var phValueElement = $(this).find('.ph-value'); // Elemen ph-value
             // Menghitung persentase nilai pH
             var percentage = (value / 14) * 100;
             // Menentukan rentang warna sesuai dengan nilai pH
             var colorClass = '';
-            if (value >= 0 && value <= 4) {
+            if (value >= 0 && value <= 3) {
                 colorClass = 'orange-color';
-            } else if (value > 4 && value <= 7) {
+            } else if (value >= 4 && value < 7) {
                 colorClass = 'yellow-color';
-            } else if (value > 7 && value <= 10) {
+            } else if (value >= 7 && value <= 10) {
                 colorClass = 'green-color';
             } else if (value > 10 && value <= 14) {
                 colorClass = 'purple-color';
             }
-            // Menambahkan class warna ke ph-progress-bar
-            left.add(right).addClass(colorClass);
+            // Menambahkan class warna ke ph-progress-bar dan ph-value
+            left.add(right).add(phValueElement).addClass(colorClass);
             // Menyesuaikan rotasi untuk nilai pH antara 0 dan 14
             if (value > 0) {
                 if (value <= 7) {

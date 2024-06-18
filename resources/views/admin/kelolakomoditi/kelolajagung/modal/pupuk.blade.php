@@ -22,22 +22,6 @@
                                         </option>
                                         @endforeach
                                     </select>
-                                    {{-- <select class="form-select" id="pupuk_id" name="pupuk_id"
-                                        aria-label="Default select example">
-                                        <option selected value="">Pilih Jenis Pupuk</option>
-                           
-                                        <option value="1">
-                                            Biogreenfil
-                                        </option>
-
-                                        <option value="2">
-                                            Pupuk NPK
-                                        </option>
-
-                                        <option value="3">
-                                            Belum Dipupuk
-                                        </option>
-                                    </select> --}}
                                 </div>
                             </div>
 
